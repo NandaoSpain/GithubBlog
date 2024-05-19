@@ -1,4 +1,5 @@
 export const defaultTheme = {
+  white: "#ffffff",
   blue: '#3294f8',
   title: '#e7edf4',
   subtitle: '#c4d4e3',
@@ -10,4 +11,4 @@ export const defaultTheme = {
   profile: '#0b1b2b',
   background: '#071422',
   input: '#040f1a'
-} as const
+} 

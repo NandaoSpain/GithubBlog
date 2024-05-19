@@ -6,13 +6,12 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  :focus{
-    outline: 0;
-  }
+
   body {
     background: ${(props) => props.theme.background};
     -webkit-font-smoothing: antialiased;
   }
+  
   body, input, textarea, button {
     font-family: Nunito, sans-serif;
     font-weight: 400;
