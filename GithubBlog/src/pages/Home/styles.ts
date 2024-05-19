@@ -8,5 +8,9 @@ export const HomeContentContainer = styled.div`
   height: 212px;
   margin: 0 auto;
   margin-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  
 
 `
