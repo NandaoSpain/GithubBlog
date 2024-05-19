@@ -33,5 +33,9 @@ export const SearchFormContainer = styled.form`
     margin-bottom: 16px;
     outline: none;
     background-color: ${(props) => props.theme["background"]};
+
+    &::placeholder {
+      color: ${(props) => props.theme["text"]};
+    }
   }
 `

@@ -9,6 +9,7 @@ export const PostCardContainer = styled.a`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  transition: 0.2s;
   
   div {
     display: flex;
