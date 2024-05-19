@@ -1,5 +1,7 @@
+import { Header } from "./Header";
+
 export function App() {
   return (
-    <h1>Blog</h1>
+    <Header />
     )
 }
