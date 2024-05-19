@@ -13,5 +13,10 @@ export const HeaderContainer = styled.header`
     width: 148px;
     height: 98px;
     fill: blue;
+    margin-top: -60px;
+  }
+
+  .effect {
+    margin-top: -60px;
   }
 `
