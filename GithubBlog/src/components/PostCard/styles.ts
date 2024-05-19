@@ -9,7 +9,7 @@ export const PostCardContainer = styled.a`
   display: flex;
   flex-direction: column;
   cursor: pointer;
-
+  
   div {
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,8 @@ export const PostCardContainer = styled.a`
     h3 {
      color: ${(props) => props.theme["title"]};
      font-size: 16px;
-     width: 70%; 
+     width: 70%;
+      
     }
 
     span {
@@ -33,6 +34,7 @@ export const PostCardContainer = styled.a`
       color: ${(props) => props.theme["text"]};
       font-size: 14px;
       padding-top: 20px;
+      
     }
 
 

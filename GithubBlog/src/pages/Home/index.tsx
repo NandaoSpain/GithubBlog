@@ -1,6 +1,7 @@
 import { Header } from "../../components/Header";
 import { PostCard } from "../../components/PostCard";
 import { Profile } from "../../components/Profile";
+import { SearchForm } from "../../components/SearchForm";
 import { HomeContainer, HomeContentContainer } from "./styles";
 
 export function Home() {
@@ -8,9 +9,8 @@ export function Home() {
     <HomeContainer>
       <Header />
       <Profile />
-      <h2>Publicações</h2>
-      <p>6 publicações</p>        
-      
+          
+      <SearchForm />
       <HomeContentContainer>
         <PostCard 
           title={"JavaScript data types and data structures"} 
