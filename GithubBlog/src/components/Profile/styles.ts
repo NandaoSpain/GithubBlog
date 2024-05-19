@@ -6,8 +6,6 @@ export const ProfileContainer = styled.div`
   background: ${(props) => props.theme.profile};
   margin: -80px auto;
   border-radius: 10px;
- 
-  flex: 1;
 `
 
 export const ProfileContentContainer = styled.div`
