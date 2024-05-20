@@ -10,27 +10,10 @@ const searchFormSchema = z.object({
 type searchFormInputs = z.infer<typeof searchFormSchema>
 
 
-// async function repoSearch(query: string) {
-//   const url = `https://api.github.com/users/nandaospain/repos/`
-//   const response = await api.get('/', {
-//     params: {
-//       q: query,
-//     },
-//   })
-//   let filteredTransactions = response.data
+async function repoSearch() {
 
-//   if (query) {
-//     filteredTransactions = filteredTransactions.filter(
-//       (transaction: Transaction) =>
-//         transaction.description.toLowerCase().includes(query.toLowerCase()),
-//     )
-//   }
-
-//   filteredTransactions.sort(
-//     (a: Transaction, b: Transaction) =>
-//       new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-//   )
-// }
+  
+}
 
 export function SearchForm() {
   const {
@@ -41,7 +24,7 @@ export function SearchForm() {
   })
   
   function handleSearch(data: searchFormInputs) {
-    // repoSearch(data.query)
+    repoSearch()
   }
   
   return(

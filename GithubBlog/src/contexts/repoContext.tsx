@@ -1,24 +1,26 @@
-import { createContext } from "react";
-import { api } from '../lib/axios'
+import axios from "axios";
+import { createContext, useEffect, useState } from "react"
 
 interface RepoProviderProps {
   children: React.ReactNode;
 }
 
+
+
 export const RepoContext = createContext({})
 
 export function RepoProvider({ children }: RepoProviderProps) {
-
-  async function issuesRender () {
-    await response = api.get('https://api.github.com/search/issues')
-    console.log(response)    
-
-  }
-
-
+  const [repoData, setRepoData] = useState([])
+  useEffect(() => {
+    axios.get('https://api.github.com/repos/NandaoSpain/GithubBlog/issues')
+     .then(response => {
+        setRepoData(response.data)
+      })
+  }, [])
   return (
     <RepoContext.Provider value={{
-      issuesRender,
+      repoData,
+      setRepoData
     }}>
       {children}
     </RepoContext.Provider>

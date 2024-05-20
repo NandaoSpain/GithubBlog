@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import { PostCardContainer } from "./styles";
-import { RepoContext } from "../../contexts/repoContext";
 
 interface PostCardProps {
   title: string;
@@ -10,16 +8,16 @@ interface PostCardProps {
 }
 
 export function PostCard({ title, date, content, url }: PostCardProps) {
-  const { issuesRender } = useContext(RepoContext)
-  console.log(issuesRender)
+  
+  
   return(
     <PostCardContainer>
       <a href={url}>
         <div>
-          <h3>{title}</h3> 
+          <h3 className="card-title">{title}</h3> 
           <span>{date}</span>
         </div>
-        <p>{content}</p>
+        <p className="card-content">{content}</p>
       </a>
     </PostCardContainer>
   )

@@ -15,10 +15,14 @@ export const PostCardContainer = styled.a`
     display: flex;
     justify-content: space-between;
 
-    h3 {
-     color: ${(props) => props.theme["title"]};
-     font-size: 16px;
-     width: 70%;
+    .card-title {
+      color: ${(props) => props.theme["title"]};
+      font-size: 16px;
+      width: 70%;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       
     }
 
@@ -31,10 +35,14 @@ export const PostCardContainer = styled.a`
   }
 
   
-  p {
+  .card-content {
       color: ${(props) => props.theme["text"]};
       font-size: 14px;
       padding-top: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 7; 
+      -webkit-box-orient: vertical;
+      overflow: hidden;
       
     }
 
