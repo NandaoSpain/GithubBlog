@@ -19,10 +19,10 @@ export const PostCardContainer = styled.a`
       color: ${(props) => props.theme["title"]};
       font-size: 16px;
       width: 70%;
-      -webkit-line-clamp: 2;
       overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
       
     }
 
@@ -40,7 +40,7 @@ export const PostCardContainer = styled.a`
       font-size: 14px;
       padding-top: 20px;
       display: -webkit-box;
-      -webkit-line-clamp: 7; 
+      -webkit-line-clamp: 6; 
       -webkit-box-orient: vertical;
       overflow: hidden;
       

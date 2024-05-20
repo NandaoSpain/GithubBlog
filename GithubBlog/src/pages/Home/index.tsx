@@ -6,20 +6,32 @@ import { SearchForm } from "../../components/SearchForm";
 import { RepoContext } from "../../contexts/repoContext";
 import { HomeContainer, HomeContentContainer } from "./styles";
 
+interface ItemProps {
+  title: string;
+  created_at: string;
+  body: string;
+  id: number;
+}
 
 export function Home() {
-  const { repoData, setRepoData } = useContext(RepoContext)
-  console.log(repoData)
+  const repoContext = useContext(RepoContext)
+
+  if (!repoContext) {
+    return <div>Loading...</div>
+  }
+  const { repoData } = repoContext;
   return(
+
     <HomeContainer>
       <Header />
       <Profile />
           
       <SearchForm />
       <HomeContentContainer>
-        {repoData.map((item) =>{
+        {repoData.map((item: ItemProps) =>{
           return(
-            <PostCard 
+            <PostCard
+              key={item.id} 
               title={item.title} 
               date={new Date(item.created_at).toLocaleDateString()} 
               content={item.body} 

@@ -11,14 +11,14 @@ export function PostCard({ title, date, content, url }: PostCardProps) {
   
   
   return(
-    <PostCardContainer>
-      <a href={url}>
+    <a href={url}>
+      <PostCardContainer>
         <div>
           <h3 className="card-title">{title}</h3> 
           <span>{date}</span>
         </div>
         <p className="card-content">{content}</p>
-      </a>
-    </PostCardContainer>
+      </PostCardContainer>
+    </a>
   )
 }
